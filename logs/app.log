@@ -1,0 +1,40 @@
+2026-05-03 11:21:45,427 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 11:21:45,655 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 11:21:45,655 - ai-docs-assistant - INFO - Сервис готов к работе
+2026-05-03 11:22:51,424 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 11:22:51,571 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 11:22:51,571 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 11:26:51,861 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 11:26:52,005 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 11:26:52,006 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 11:27:01,414 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 11:27:01,565 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 11:27:01,565 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 11:29:06,625 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 11:29:06,770 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 11:29:06,770 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 11:29:51,466 - ai-docs-assistant - INFO - Semantische Suche: 'поиск пользователя'
+2026-05-03 11:29:51,605 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'поиск пользователя'
+2026-05-03 11:30:22,466 - ai-docs-assistant - INFO - Semantische Suche: 'новая задача'
+2026-05-03 11:30:22,537 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'новая задача'
+2026-05-03 11:30:51,473 - ai-docs-assistant - INFO - Semantische Suche: 'Erstellt eine neue Aufgabe'
+2026-05-03 11:30:51,534 - ai-docs-assistant - INFO - Ein relevanter Dokument wurde gefunden: (docs/create_task.md) (score=0.657) для 'Erstellt eine neue Aufgabe'
+2026-05-03 11:31:20,495 - ai-docs-assistant - INFO - Semantische Suche: 'новая задача'
+2026-05-03 11:31:20,557 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'новая задача'
+2026-05-03 11:31:31,089 - ai-docs-assistant - INFO - Semantische Suche: 'new Task'
+2026-05-03 11:31:31,173 - ai-docs-assistant - INFO - Ein relevanter Dokument wurde gefunden: (docs/create_task.md) (score=0.697) для 'new Task'
+2026-05-03 11:32:01,180 - ai-docs-assistant - INFO - Semantische Suche: 'все пользователи'
+2026-05-03 11:32:01,257 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'все пользователи'
+2026-05-03 11:32:11,013 - ai-docs-assistant - INFO - Semantische Suche: 'all users'
+2026-05-03 11:32:11,068 - ai-docs-assistant - INFO - Ein relevanter Dokument wurde gefunden: (docs/get_users.md) (score=0.629) для 'all users'
+2026-05-03 11:32:48,017 - ai-docs-assistant - INFO - Semantische Suche: 'Эндпоинт для получения профиля'
+2026-05-03 11:32:48,111 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'Эндпоинт для получения профиля'
+2026-05-03 13:37:44,447 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 13:37:44,686 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 13:37:44,686 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 13:47:37,054 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 13:47:37,200 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 13:47:37,201 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 13:53:49,201 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 13:53:49,352 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 13:53:49,352 - ai-docs-assistant - INFO - Service ist betriebsbereit
