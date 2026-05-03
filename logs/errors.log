@@ -1,0 +1,2 @@
+2026-05-03 14:20:53,954 - ai-docs-assistant - ERROR - Fehler beim Hinzufügen des Dokuments docs/test_search.md: [Errno 2] No such file or directory: 'docs/test_search.md'
+2026-05-03 14:21:33,414 - ai-docs-assistant - ERROR - Fehler beim Hinzufügen des Dokuments docs/test_search.md: [Errno 2] No such file or directory: 'docs/test_search.md'

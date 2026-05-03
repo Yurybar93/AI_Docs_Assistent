@@ -38,3 +38,61 @@
 2026-05-03 13:53:49,201 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
 2026-05-03 13:53:49,352 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
 2026-05-03 13:53:49,352 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 13:58:01,287 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 13:58:01,429 - ai-docs-assistant - INFO - 5 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 13:58:01,430 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 13:58:48,690 - ai-docs-assistant - INFO - Semantische Suche: 'удаление пользователя по его id'
+2026-05-03 13:58:48,749 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'удаление пользователя по его id'
+2026-05-03 13:58:48,749 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: удаление пользователя по его id
+2026-05-03 13:59:48,112 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: удаление пользователя по его id
+2026-05-03 13:59:48,113 - ai-docs-assistant - INFO - Dokument gespeichert: docs/api.md
+2026-05-03 13:59:48,243 - ai-docs-assistant - INFO - Dokument wurde zum Index hinzugefügt: docs/api.md
+2026-05-03 14:00:26,575 - ai-docs-assistant - INFO - Semantische Suche: 'удаление пользователя по его id'
+2026-05-03 14:00:26,639 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'удаление пользователя по его id'
+2026-05-03 14:00:26,639 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: удаление пользователя по его id
+2026-05-03 14:01:16,005 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: удаление пользователя по его id
+2026-05-03 14:01:16,005 - ai-docs-assistant - INFO - Dokument gespeichert: docs/api_1.md
+2026-05-03 14:01:16,073 - ai-docs-assistant - INFO - Dokument wurde zum Index hinzugefügt: docs/api_1.md
+2026-05-03 14:01:42,324 - ai-docs-assistant - INFO - Semantische Suche: 'удаление пользователя по его id'
+2026-05-03 14:01:42,378 - ai-docs-assistant - INFO - Ein relevanter Dokument wurde gefunden: (docs/api.md) (score=0.657) для 'удаление пользователя по его id'
+2026-05-03 14:04:48,337 - ai-docs-assistant - INFO - Semantische Suche: 'löschen Nutzer'
+2026-05-03 14:04:48,430 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'löschen Nutzer'
+2026-05-03 14:04:48,430 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: löschen Nutzer
+2026-05-03 14:06:39,267 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: löschen Nutzer
+2026-05-03 14:06:39,270 - ai-docs-assistant - INFO - Dokument gespeichert: docs/delete_user.md
+2026-05-03 14:06:39,410 - ai-docs-assistant - INFO - Dokument wurde zum Index hinzugefügt: docs/delete_user.md
+2026-05-03 14:07:28,222 - ai-docs-assistant - INFO - Semantische Suche: 'löschen Task'
+2026-05-03 14:07:28,285 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'löschen Task'
+2026-05-03 14:07:28,285 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: löschen Task
+2026-05-03 14:07:59,110 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: löschen Task
+2026-05-03 14:07:59,114 - ai-docs-assistant - INFO - Dokument gespeichert: docs/delete_task.md
+2026-05-03 14:07:59,193 - ai-docs-assistant - INFO - Dokument wurde zum Index hinzugefügt: docs/delete_task.md
+2026-05-03 14:17:26,686 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 14:17:26,859 - ai-docs-assistant - INFO - 6 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 14:17:26,859 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 14:19:47,666 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 14:19:47,841 - ai-docs-assistant - INFO - 6 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 14:19:47,841 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 14:20:45,361 - ai-docs-assistant - INFO - 6 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 14:20:45,364 - ai-docs-assistant - INFO - Semantische Suche: 'Endpoint zum Erstellen einer neuen Aufgabe für den Benutzer'
+2026-05-03 14:20:45,391 - ai-docs-assistant - INFO - Ein relevanter Dokument wurde gefunden: (docs/create_task.md) (score=0.687) для 'Endpoint zum Erstellen einer neuen Aufgabe für den Benutzer'
+2026-05-03 14:20:45,446 - ai-docs-assistant - INFO - Semantische Suche: 'Suche nach Schlüsselwörtern'
+2026-05-03 14:20:45,475 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'Suche nach Schlüsselwörtern'
+2026-05-03 14:20:45,477 - ai-docs-assistant - INFO - Semantische Suche: 'Suche nach Schlüsselwörtern'
+2026-05-03 14:20:45,503 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'Suche nach Schlüsselwörtern'
+2026-05-03 14:20:45,503 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: Suche nach Schlüsselwörtern
+2026-05-03 14:20:53,954 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: Suche nach Schlüsselwörtern
+2026-05-03 14:20:53,954 - ai-docs-assistant - ERROR - Fehler beim Hinzufügen des Dokuments docs/test_search.md: [Errno 2] No such file or directory: 'docs/test_search.md'
+2026-05-03 14:21:24,407 - ai-docs-assistant - INFO - Initialisierung RAG aus docs/
+2026-05-03 14:21:24,583 - ai-docs-assistant - INFO - 6 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 14:21:24,583 - ai-docs-assistant - INFO - Service ist betriebsbereit
+2026-05-03 14:21:27,194 - ai-docs-assistant - INFO - 6 Dokumente wurden in den RAG-Speicher geladen
+2026-05-03 14:21:27,196 - ai-docs-assistant - INFO - Semantische Suche: 'Endpoint zum Erstellen einer neuen Aufgabe für den Benutzer'
+2026-05-03 14:21:27,222 - ai-docs-assistant - INFO - Ein relevanter Dokument wurde gefunden: (docs/create_task.md) (score=0.687) для 'Endpoint zum Erstellen einer neuen Aufgabe für den Benutzer'
+2026-05-03 14:21:27,225 - ai-docs-assistant - INFO - Semantische Suche: 'Suche nach Schlüsselwörtern'
+2026-05-03 14:21:27,247 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'Suche nach Schlüsselwörtern'
+2026-05-03 14:21:27,248 - ai-docs-assistant - INFO - Semantische Suche: 'Suche nach Schlüsselwörtern'
+2026-05-03 14:21:27,267 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'Suche nach Schlüsselwörtern'
+2026-05-03 14:21:27,267 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: Suche nach Schlüsselwörtern
+2026-05-03 14:21:33,414 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: Suche nach Schlüsselwörtern
+2026-05-03 14:21:33,414 - ai-docs-assistant - ERROR - Fehler beim Hinzufügen des Dokuments docs/test_search.md: [Errno 2] No such file or directory: 'docs/test_search.md'

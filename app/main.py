@@ -4,8 +4,10 @@ from contextlib import asynccontextmanager
 from concurrent.futures import ThreadPoolExecutor
 
 from app.logger import logger
-from app.schemas import SearchRequest, SearchResponse
-from app.rag import initialize_rag_from_docs, search_documentation
+from app.storage import save_document
+from app.agents import generate_and_validate_documentation
+from app.schemas import SearchRequest, SearchResponse, GenerateRequest, GenerateResponse
+from app.rag import initialize_rag_from_docs, add_document_to_index, search_documentation
 
 
 @asynccontextmanager
@@ -41,4 +43,43 @@ def search_docs(request: SearchRequest):
         return SearchResponse(
             found=False,
             message='Dokumenten nicht gefunden. Verwenden Sie /generate, um eine neue zu erstellen'
+        )
+
+@app.post('/generate', response_model=GenerateResponse)
+def generate_docs(request: GenerateRequest):
+    """
+    Generiert neue Dokumentation und speichert sie in docs/.
+    """
+    if search_documentation(request.query, similarity_threshold=0.75):
+        return GenerateResponse(
+            success=False,
+            message='Dokument existiert bereits. Verwenden Sie /search.'
+        )
+
+    try:
+        content = generate_and_validate_documentation(request.query)
+
+        if not content.strip().startswith('###'):
+            logger.error(f'Das generierte Dokument entspricht nicht dem Format für die Anfrage: {request.query}')
+            return GenerateResponse(
+                success=False,
+                message='Generierungsfehler: ungültiges Dokumentformat.'
+            )
+
+        file_path = save_document(content, request.query)
+
+        add_document_to_index(file_path)
+
+        return GenerateResponse(
+            success=True,
+            message='Dokument wurde erfolgreich erstellt und gespeichert.',
+            content=content,
+            file_path=file_path
+        )
+
+    except Exception as e:
+        logger.error(f'Fehler bei der Dokumentgenerierung: {e}', exc_info=True)
+        return GenerateResponse(
+            success=False,
+            message=f'Generierungsfehler: {str(e)}'
         )

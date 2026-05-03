@@ -1,0 +1,6 @@
+#!/Users/iurii/Projects/AI_Developer_assistent/venv/bin/python3.12
+import sys
+from huggingface_hub.cli.hf import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
