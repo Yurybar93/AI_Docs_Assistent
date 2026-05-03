@@ -15,7 +15,7 @@ collection_name = settings.QDRANT_COLLECTION_NAME
 embedding_model_name = settings.EMBEDDING_MODEL_NAME
 vector_size = settings.VECTOR_SIZE
 
-client = QdrantClient(settings.QDRANT_HOST, port=settings.QDRANT_PORT)
+client = QdrantClient(host=settings.QDRANT_HOST, port=settings.QDRANT_PORT)
 
 if client.collection_exists(collection_name):
     client.delete_collection(collection_name)

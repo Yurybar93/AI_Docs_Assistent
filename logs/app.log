@@ -96,3 +96,17 @@
 2026-05-03 14:21:27,267 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: Suche nach Schlüsselwörtern
 2026-05-03 14:21:33,414 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: Suche nach Schlüsselwörtern
 2026-05-03 14:21:33,414 - ai-docs-assistant - ERROR - Fehler beim Hinzufügen des Dokuments docs/test_search.md: [Errno 2] No such file or directory: 'docs/test_search.md'
+2026-05-03 14:27:12,261 - ai-docs-assistant - INFO - Semantische Suche: 'string'
+2026-05-03 14:27:12,778 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'string'
+2026-05-03 14:27:22,312 - ai-docs-assistant - INFO - Semantische Suche: 'delete'
+2026-05-03 14:27:22,362 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'delete'
+2026-05-03 14:27:30,577 - ai-docs-assistant - INFO - Semantische Suche: 'create'
+2026-05-03 14:27:30,622 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'create'
+2026-05-03 14:28:23,657 - ai-docs-assistant - INFO - Semantische Suche: 'delete Nutzer'
+2026-05-03 14:28:23,711 - ai-docs-assistant - INFO - Keine relevanten Dokumente gefunden für 'delete Nutzer'
+2026-05-03 14:28:23,711 - ai-docs-assistant - INFO - Start der Generierung für Anfrage: delete Nutzer
+2026-05-03 14:28:32,385 - ai-docs-assistant - INFO - Das Dokument hat die Validierung für die Anfrage bestanden: delete Nutzer
+2026-05-03 14:28:32,386 - ai-docs-assistant - INFO - Dokument gespeichert: docs/api_user.md
+2026-05-03 14:28:32,507 - ai-docs-assistant - INFO - Dokument wurde zum Index hinzugefügt: docs/api_user.md
+2026-05-03 14:28:54,196 - ai-docs-assistant - INFO - Semantische Suche: 'delete Nutzer'
+2026-05-03 14:28:54,248 - ai-docs-assistant - INFO - Ein relevanter Dokument wurde gefunden: (docs/delete_user.md) (score=0.672) для 'delete Nutzer'
