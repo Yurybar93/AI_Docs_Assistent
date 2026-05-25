@@ -1,3 +1,4 @@
+import json
 import re
 from pathlib import Path
 
@@ -5,6 +6,8 @@ from app.logger import logger
 
 DOCS_DIR = Path('docs')
 DOCS_DIR.mkdir(exist_ok=True)
+
+QUERIES_INDEX = DOCS_DIR / '.query_index.json'
 
 ACTION_KEYWORDS = {
     'get': ['abruf', 'erhalt', 'les', 'anzeigen', 'daten', 'informationen'],
@@ -60,3 +63,34 @@ def save_document(content: str, query: str) -> str:
 
     logger.info(f'Dokument gespeichert: {file_path}')
     return str(file_path)
+
+
+def _normalize_query(query: str) -> str:
+    return ' '.join(query.lower().strip().split())
+
+
+def find_document_by_query(query: str) -> str | None:
+    """Findet den Pfad eines Dokuments, das mit einer identischen Anfrage erzeugt wurde."""
+    if not QUERIES_INDEX.exists():
+        return None
+    try:
+        index = json.loads(QUERIES_INDEX.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return index.get(_normalize_query(query))
+
+
+def remember_query(query: str, file_path: str) -> None:
+    """Speichert die Anfrage->Datei-Zuordnung für exakte Dubletten-Pruefung."""
+    DOCS_DIR.mkdir(exist_ok=True)
+    index: dict[str, str] = {}
+    if QUERIES_INDEX.exists():
+        try:
+            index = json.loads(QUERIES_INDEX.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            index = {}
+    index[_normalize_query(query)] = file_path
+    QUERIES_INDEX.write_text(
+        json.dumps(index, indent=2, ensure_ascii=False),
+        encoding='utf-8'
+    )

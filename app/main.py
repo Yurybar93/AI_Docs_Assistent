@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 from concurrent.futures import ThreadPoolExecutor
 
 from app.logger import logger
-from app.storage import save_document
+from app.storage import save_document, find_document_by_query, remember_query
 from app.agents import generate_and_validate_documentation
 from app.schemas import SearchRequest, SearchResponse, GenerateRequest, GenerateResponse
 from app.rag import initialize_rag_from_docs, add_document_to_index, search_documentation
@@ -50,7 +50,15 @@ def generate_docs(request: GenerateRequest):
     """
     Generiert neue Dokumentation und speichert sie in docs/.
     """
-    if search_documentation(request.query, similarity_threshold=0.75):
+    existing_path = find_document_by_query(request.query)
+    if existing_path:
+        logger.info(f'Dokument existiert bereits (identische Anfrage): {existing_path}')
+        return GenerateResponse(
+            success=False,
+            message=f'Dokument existiert bereits (identische Anfrage): {existing_path}. Verwenden Sie /search.'
+        )
+
+    if search_documentation(request.query, similarity_threshold=0.6):
         return GenerateResponse(
             success=False,
             message='Dokument existiert bereits. Verwenden Sie /search.'
@@ -74,6 +82,7 @@ def generate_docs(request: GenerateRequest):
             )
 
         file_path = save_document(content, request.query)
+        remember_query(request.query, file_path)
 
         add_document_to_index(file_path)
 
