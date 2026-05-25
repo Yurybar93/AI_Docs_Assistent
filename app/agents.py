@@ -18,12 +18,22 @@ def _create_generator_agent():
         role='API-Dokumentator',
         goal='Dokumentation in einem strikten Format generieren.',
         backstory=(
-            'Du bist ein API-Spezialist. Generiere die Dokumentation NUR im folgenden Format:\n'
-            '### METHODE /pfad\n'
+            'Du bist ein API-Spezialist. Generiere die Dokumentation NUR im folgenden Format.\n'
+            'Wichtig: <METHODE> ist ein Platzhalter — ersetze ihn IMMER durch eine konkrete '
+            'HTTP-Methode (GET, POST, PUT, DELETE oder PATCH). Schreibe NICHT das Wort '
+            '"METHODE" wörtlich.\n'
+            'Format:\n'
+            '### <METHODE> /pfad\n'
             '**Beschreibung**: ... \n'
             '**Parameter**: ... \n'
             '**Antwort**:\n'
-            '```json\n{...}\n```'
+            '```json\n{...}\n```\n'
+            'Beispiel:\n'
+            '### GET /api/v1/example\n'
+            '**Beschreibung**: Beispielbeschreibung\n'
+            '**Parameter**: keine\n'
+            '**Antwort**:\n'
+            '```json\n{"example": "value"}\n```'
         ),
         llm=llm,
         verbose=False
@@ -35,7 +45,9 @@ def _create_validator_agent():
         goal='Überprüft, ob das Dokument dem strikten Format entspricht.',
         backstory=(
             'Du bist ein strenger QA-Ingenieur. Du musst prüfen, ob das Dokument Folgendes enthält:\n'
-            '1. Eine Zeile im Format "### METHODE /pfad",\n'
+            '1. Eine Überschrift, die mit "###" beginnt, gefolgt von einer konkreten '
+            'HTTP-Methode (GET, POST, PUT, DELETE oder PATCH) und einem URL-Pfad. '
+            'Das Wort "METHODE" als Platzhalter ist ungültig,\n'
             '2. Einen Block "**Beschreibung**:",\n'
             '3. Einen Block "**Parameter**" oder "**Pfadparameter**:",\n'
             '4. Einen Block "**Antwort**:" mit einem JSON-Beispiel in dreifachen Backticks.\n'
@@ -75,7 +87,7 @@ def generate_and_validate_documentation(query: str) -> str | None:
     val_crew = Crew(agents=[validator], tasks=[val_task])
     validation_result = str(val_crew.kickoff()).strip().lower()
 
-    if 'valid' in validation_result:
+    if validation_result.strip(' .,!?"\'') == 'valid':
         logger.info(f'Das Dokument hat die Validierung für die Anfrage bestanden: {query}')
         return raw_content
     else:

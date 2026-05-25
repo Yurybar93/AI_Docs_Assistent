@@ -9,12 +9,12 @@ DOCS_DIR.mkdir(exist_ok=True)
 ACTION_KEYWORDS = {
     'get': ['abruf', 'erhalt', 'les', 'anzeigen', 'daten', 'informationen'],
     'create': ['erstell', 'anleg', 'hinzufüg', 'neu'],
-    'delete': ['lösch', 'entfern', 'remove'],
+    'delete': ['lösch', 'entfern', 'remove', 'delete'],
     'update': ['aktualisier', 'änder', 'bearbeit', 'status', 'edit']
 }
 
 ENTITY_KEYWORDS = {
-    'user': ['benutzer', 'nutzer', 'konto' 'user'],
+    'user': ['benutzer', 'nutzer', 'konto', 'user'],
     'task': ['aufgabe', 'aufgaben', 'todo', 'task'],
     'profile': ['profil', 'persönlich']
 }

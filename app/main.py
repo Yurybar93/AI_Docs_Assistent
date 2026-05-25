@@ -59,6 +59,13 @@ def generate_docs(request: GenerateRequest):
     try:
         content = generate_and_validate_documentation(request.query)
 
+        if content is None:
+            logger.warning(f'Validierung fehlgeschlagen für die Anfrage: {request.query}')
+            return GenerateResponse(
+                success=False,
+                message='Validierung fehlgeschlagen: Das generierte Dokument wurde abgelehnt.'
+            )
+
         if not content.strip().startswith('###'):
             logger.error(f'Das generierte Dokument entspricht nicht dem Format für die Anfrage: {request.query}')
             return GenerateResponse(

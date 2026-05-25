@@ -25,7 +25,7 @@ client.create_collection(
     vectors_config=VectorParams(size=vector_size, distance=Distance.COSINE)
 )
 
-embeddings = OllamaEmbeddings(model=embedding_model_name)
+embeddings = OllamaEmbeddings(model=embedding_model_name,base_url=settings.ollama_url)
 
 vector_store = QdrantVectorStore(
     client=client,
